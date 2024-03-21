@@ -13,17 +13,16 @@
   
   #### Parameters
 
-  > | name      |  type     | data type               | description     |
-  > |-----------|-----------|-------------------------|-----------------|
-  > | None      |  N/A      | N/A                     | N/A             |
+> | name | type | data type | description |
+> | ---- | ---- | --------- | ----------- |
+> | None | N/A  | N/A       | N/A         |
 
-  
-  #### Responses
+#### Responses
 
-  > | http code     | content-type                      | response              |
-  > |---------------|-----------------------------------|-----------------------|
-  > | `200`         | `application/json`                | Array of task objects |
-  
+> | http code | content-type       | response              |
+> | --------- | ------------------ | --------------------- |
+> | `200`     | `application/json` | Array of task objects |
+
 </details>
 
 <details>
@@ -35,18 +34,18 @@
   
   #### Parameters
 
-  > | name      |  type     | data type  | description     |
-  > |-----------|-----------|------------|-----------------|
-  > | id        |  required | string     | ID of the task  |
+> | name | type     | data type | description    |
+> | ---- | -------- | --------- | -------------- |
+> | id   | required | string    | ID of the task |
 
-  #### Responses
+#### Responses
 
-  > | http code     | content-type                      | response                  |
-  > |---------------|-----------------------------------|---------------------------|
-  > | `200`         | `application/json`                | A task object             |
-  > | `403`         | `application/json`                | `{"msg":"Forbidden}`      |
-  > | `404`         | `application/json`                | `{"msg":"Task not found}` |
-  
+> | http code | content-type       | response                  |
+> | --------- | ------------------ | ------------------------- |
+> | `200`     | `application/json` | A task object             |
+> | `403`     | `application/json` | `{"msg":"Forbidden}`      |
+> | `404`     | `application/json` | `{"msg":"Task not found}` |
+
 </details>
 
 <details>
@@ -58,23 +57,22 @@
   
   #### Parameters
 
-  > | name             |  type     | data type               | description                  |
-  > |------------------|-----------|-------------------------|------------------------------|
-  > | id               |  required | string                  | ID of the task               |
-  > | title            |  required | string                  | Title of the new task        |
-  > | description      |  optional | string                  | Description of the new task  |
-  > | datestart        |  optional | string                  | Date to start the task       |
-  > | dateend          |  optional | string                  | Date to end the task         |
-  
-  #### Responses
+> | name        | type     | data type | description                 |
+> | ----------- | -------- | --------- | --------------------------- |
+> | id          | required | string    | ID of the task              |
+> | title       | required | string    | Title of the new task       |
+> | description | optional | string    | Description of the new task |
+> | dueDate     | optional | string    | Date to end the task        |
 
-  > | http code     | content-type                      | response                                                            |
-  > |---------------|-----------------------------------|---------------------------------------------------------------------|
-  > | `200`         | `application/json`                | Array of task objects                                               |
-  > | `400`         | `application/json`                | `{"msg": "You missed some parameters: parameter1, parameter2, ...}` |
-  > | `403`         | `application/json`                | `{"msg": "Forbidden"}  `                                            |
-  > | `404`         | `application/json`                | `{"msg": "Task not found"}`                                         |
-  
+#### Responses
+
+> | http code | content-type       | response                                                            |
+> | --------- | ------------------ | ------------------------------------------------------------------- |
+> | `200`     | `application/json` | `{ msg: "Task updated" }`                                           |
+> | `400`     | `application/json` | `{"msg": "You missed some parameters: parameter1, parameter2, ...}` |
+> | `403`     | `application/json` | `{"msg": "Forbidden"}  `                                            |
+> | `404`     | `application/json` | `{"msg": "Task not found"}`                                         |
+
 </details>
 
 <details>
@@ -86,18 +84,19 @@
   
   #### Parameters
 
-  > | name      |  type     | data type  | description     |
-  > |-----------|-----------|------------|-----------------|
-  > | id        |  required | string     | ID of the task  |
-  
-  #### Responses
+> | name | type     | data type | description    |
+> | ---- | -------- | --------- | -------------- |
+> | id   | required | string    | ID of the task |
 
-  > | http code     | content-type                      | response                                                            |
-  > |---------------|-----------------------------------|---------------------------------------------------------------------|
-  > | `200`         | `application/json`                | Array of task objects                                               |
-  > | `403`         | `application/json`                | `{"msg": "Forbidden"}  `                                            |
-  > | `404`         | `application/json`                | `{"msg": "Task not found"}`                                         |
-  
+#### Responses
+
+> | http code | content-type       | response                               |
+> | --------- | ------------------ | -------------------------------------- |
+> | `200`     | `application/json` | `{"msg": "Task removed successfully"}` |
+> | `403`     | `application/json` | `{"msg": "Forbidden"}`                 |
+> | `404`     | `application/json` | `{"msg": "Task not found"}`            |
+> | `400`     | `application/json` | `{"msg": "You missed parameter 'id'"}` |
+
 </details>
 
 <details>
@@ -109,20 +108,19 @@
   
   #### Parameters
 
-  > | name             |  type     | data type               | description                  |
-  > |------------------|-----------|-------------------------|------------------------------|
-  > | title            |  required | string                  | Title of the new task        |
-  > | description      |  optional | string                  | Description of the new task  |
-  > | datestart        |  optional | string                  | Date to start the task       |
-  > | dateend          |  optional | string                  | Date to end the task         |
-  
-  #### Responses
+> | name        | type     | data type | description                 |
+> | ----------- | -------- | --------- | --------------------------- |
+> | title       | required | string    | Title of the new task       |
+> | description | optional | string    | Description of the new task |
+> | dueDate     | optional | string    | Date to end the task        |
 
-  > | http code     | content-type                      | response                                                            |
-  > |---------------|-----------------------------------|---------------------------------------------------------------------|
-  > | `201`         | `application/json`                | `{"msg": "Task created", "id": "123456}`                            |
-  > | `400`         | `application/json`                | `{"msg": "You missed some parameters: parameter1, parameter2, ...}` |
-  
+#### Responses
+
+> | http code | content-type       | response                                                            |
+> | --------- | ------------------ | ------------------------------------------------------------------- |
+> | `201`     | `application/json` | `{"msg": "Task created", "id": "123456}`                            |
+> | `400`     | `application/json` | `{"msg": "You missed some parameters: parameter1, parameter2, ...}` |
+
 </details>
 
 <details>
@@ -134,18 +132,19 @@
   
   #### Parameters
 
-  > | name      |  type     | data type  | description     |
-  > |-----------|-----------|------------|-----------------|
-  > | id        |  required | string     | ID of the task  |
-  
-  #### Responses
+> | name | type     | data type | description    |
+> | ---- | -------- | --------- | -------------- |
+> | id   | required | string    | ID of the task |
 
-  > | http code     | content-type                      | response                                  |
-  > |---------------|-----------------------------------|-------------------------------------------|
-  > | `200`         | `application/json`                | `{"msg": "Task marked as completed"}`     |
-  > | `403`         | `application/json`                | `{"msg": "Forbidden"}  `                  |
-  > | `404`         | `application/json`                | `{"msg": "Task not found"}`               |
-  
+#### Responses
+
+> | http code | content-type       | response                               |
+> | --------- | ------------------ | -------------------------------------- |
+> | `200`     | `application/json` | `{"msg": "Task marked as completed"}`  |
+> | `403`     | `application/json` | `{"msg": "Forbidden"}  `               |
+> | `404`     | `application/json` | `{"msg": "Task not found"}`            |
+> | `400`     | `application/json` | `{"msg": "You missed parameter 'id'"}` |
+
 </details>
 
 ### Users
@@ -159,16 +158,16 @@
   
   #### Parameters
 
-  > | name      |  type     | data type               | description     |
-  > |-----------|-----------|-------------------------|-----------------|
-  > | None      |  N/A      | N/A                     | N/A             |
-  
-  #### Responses
+> | name | type | data type | description |
+> | ---- | ---- | --------- | ----------- |
+> | None | N/A  | N/A       | N/A         |
 
-  > | http code     | content-type                      | response                                                                      |
-  > |---------------|-----------------------------------|-------------------------------------------------------------------------------|
-  > | `200`         | `application/json`                | `{"firstname": "Jordi", "lastname": "Galobart", "email": "test@example.com"}` |
-  
+#### Responses
+
+> | http code | content-type       | response                                                                      |
+> | --------- | ------------------ | ----------------------------------------------------------------------------- |
+> | `200`     | `application/json` | `{"firstname": "Jordi", "lastname": "Galobart", "email": "test@example.com"}` |
+
 </details>
 
 <details>
@@ -180,37 +179,40 @@
   
   #### Parameters
 
-  > | name             |  type     | data type               | description                  |
-  > |------------------|-----------|-------------------------|------------------------------|
-  > | email            |  required | string                  | User e-mail                  |
-  > | password         |  optional | string                  | User password                |
-  
-  #### Responses
+> | name     | type     | data type | description   |
+> | -------- | -------- | --------- | ------------- |
+> | email    | required | string    | User e-mail   |
+> | password | optional | string    | User password |
 
-  > | http code     | content-type                      | response                              |
-  > |---------------|-----------------------------------|---------------------------------------|
-  > | `200`         | `application/json`                | `{"msg": "Login succesful"}`          |
-  > | `403`         | `application/json`                | `{"msg": "Forbidden"}`                |
-  > | `404`         | `application/json`                | `{"msg": "User not found"}`           |
-  
+#### Responses
+
+> | http code | content-type       | response                                               |
+> | --------- | ------------------ | ------------------------------------------------------ |
+> | `200`     | `application/json` | `{"msg": "Login succesful"}`                           |
+> | `403`     | `application/json` | `{"msg": "Forbidden"}`                                 |
+> | `404`     | `application/json` | `{"msg": "User not found"}`                            |
+> | `400`     | `application/json` | `{"msg": "Missing parameters: 'email' or 'password'"}` |
+
 </details>
 
 ## Entidades
 
 ### Task
-- id: id interno de la tarea
-- title: título de la tarea
-- description: descripción de la tarea
-- status: TODO, IN_PROGRESS, DONE
-- dueDate: fecha vencimiento tarea
-- user: id del propietario de la tarea
-- createdAt: fecha de creación de la tarea
-- modifiedAt: fecha de modificación de la tarea
-- deletedAt: fecha de eliminación de la tarea
+
+-   id: id interno de la tarea
+-   title: título de la tarea
+-   description: descripción de la tarea
+-   status: TODO, IN_PROGRESS, DONE
+-   dueDate: fecha vencimiento tarea
+-   user: id del propietario de la tarea
+-   createdAt: fecha de creación de la tarea
+-   modifiedAt: fecha de modificación de la tarea
+-   deletedAt: fecha de eliminación de la tarea
 
 ### User
-- id: id interno del usuario
-- firstname: nombre del usuario
-- lastname: apellidos del usuario
-- email: e-mail del usuario
-- password: password del usuario
+
+-   id: id interno del usuario
+-   firstname: nombre del usuario
+-   lastname: apellidos del usuario
+-   email: e-mail del usuario
+-   password: password del usuario

@@ -195,19 +195,22 @@
   
 </details>
 
-## Task
-- title
-- description
-- status
-- datestart
-- dateend
-- id
-- user
-- createdAt
-- modifiedAt
-- deletedAt
+## Entidades
 
-## User
-- firstname
-- lastname
-- email
+### Task
+- id: id interno de la tarea
+- title: título de la tarea
+- description: descripción de la tarea
+- status: TODO, IN_PROGRESS, DONE
+- dueDate: fecha vencimiento tarea
+- user: id del propietario de la tarea
+- createdAt: fecha de creación de la tarea
+- modifiedAt: fecha de modificación de la tarea
+- deletedAt: fecha de eliminación de la tarea
+
+### User
+- id: id interno del usuario
+- firstname: nombre del usuario
+- lastname: apellidos del usuario
+- email: e-mail del usuario
+- password: password del usuario

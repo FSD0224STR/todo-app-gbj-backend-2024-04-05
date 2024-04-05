@@ -4,11 +4,13 @@
   "description": "## Endpoints",
   "main": "app.js",
   "scripts": {
+    "dev": "node app.js",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.19.1"
   },
   "devDependencies": {
